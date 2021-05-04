@@ -27,6 +27,7 @@ public class MainClass04 {
 		//Member 객체의 메소드 호출하기
 		mem1.showInfo();
 		mem2.showInfo();
+	
 	}
 }
 
