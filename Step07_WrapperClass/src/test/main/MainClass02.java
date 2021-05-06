@@ -15,7 +15,7 @@ public class MainClass02 {
 		//숫자를 문자열로 바꾸기  10.1 => "10.1"
 		String strNum=num2.toString();
 		
-		//문자열을 숫자(dobule)로 바꾸기  "10.3" => 10.3
+		//문자열을 숫자(double)로 바꾸기  "10.3" => 10.3
 		double result4=Double.parseDouble("10.3");
 	}
 }
