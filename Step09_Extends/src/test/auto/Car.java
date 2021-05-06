@@ -3,6 +3,9 @@ package test.auto;
 public class Car {
 	//필드
 	public Engine engine;
+//	public Car() {
+//		default 생성자가 있으면 인자로 전달받을 게 없기 때문에
+//	} truck에서 super 을 쓸 필요가 없다
 	//Engine 객체를 인자로 전달 받는 생성자
 	public Car(Engine engine) {
 		//필드에 저장하기

@@ -13,6 +13,7 @@ public class MainClass03 {
 		//와 신난다 인터냇 하자~
 		p2.doInternet();
 	}
+
 }
 
 

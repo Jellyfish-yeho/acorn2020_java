@@ -13,7 +13,7 @@ public class SmartPhone extends HandPhone{
 	//@Override 는 부모의 메소드를 재정의한 메소드라고 표시 해주는 어노테이션
 	@Override
 	public void takePicture() {
-		//super.takePicture();
+//		super.takePicture();
 		System.out.println("1000만 화소의 사진을 찍어요");
 	}
 }

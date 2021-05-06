@@ -1,5 +1,6 @@
 package test.main;
 
+import test.auto.Car;
 import test.auto.Engine;
 import test.auto.SportsCar;
 import test.auto.Truck;
@@ -14,6 +15,9 @@ public class MainClass08 {
 		//SprotsCar 객체를 생성해서 .drive() 메소드를 호출해 보세요.
 		SportsCar s1=new SportsCar(new Engine());
 		s1.drive();
+		
+		Car c1=new Car(null);
+		c1.drive();
 	}
 }
 
