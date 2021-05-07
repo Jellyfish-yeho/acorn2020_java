@@ -13,6 +13,13 @@ public class MainClass03 {
 		useRemocon(mp);
 		useDrill(mp);
 		useMultiPlayer(mp);
+		
+		//만일 Remocon type으로 받으면
+		Remocon r=mp;
+		//r.hole X
+		//만일 Drill type 으로 받으면
+		Drill d=mp;
+		//d.down X
 	}
 	
 	public static void useRemocon(Remocon r) {

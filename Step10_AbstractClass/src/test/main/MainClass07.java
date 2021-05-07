@@ -34,6 +34,7 @@ public class MainClass07 {
 		});
 	}
 	
+	
 	public static void useWeapon(Weapon w) {
 		w.prepare();
 		w.attack();

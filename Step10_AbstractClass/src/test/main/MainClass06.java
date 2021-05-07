@@ -3,7 +3,7 @@ package test.main;
 import test.mypac.Weapon;
 
 public class MainClass06 {
-	//staic inner class 로 Weapon 추상 클래스 상속 받기 
+	//static inner class 로 Weapon 추상 클래스 상속 받기 
 	public static class YourWeapon extends Weapon{
 		@Override
 		public void attack() {
