@@ -16,6 +16,10 @@ public class MainClass01 {
 			System.out.println("입력한 숫자 + 100 : "+result);
 		}catch(NumberFormatException nfe) {
 			System.out.println("숫자 형식에 맞게 입력 하세요.");
+			//예외 메시지를 얻어내서
+			String msg=nfe.getMessage();
+			//콘솔창에 출력
+			System.out.println(msg);
 			//예외 정보를 콘솔창에 출력하기
 			nfe.printStackTrace();
 		}

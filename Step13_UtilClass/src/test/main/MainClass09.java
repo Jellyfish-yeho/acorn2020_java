@@ -53,6 +53,8 @@ public class MainClass09 {
 		String h=(String)list.get(0).get("addr");
 		
 		int i=((String)list.get(0).get("addr")).length();
+		
+		String addr=(String)list.get(0).get("addr");
 	}
 }
 

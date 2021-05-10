@@ -38,7 +38,6 @@ public class MainClass07 {
 			//출력하기 
 			System.out.println(line);
 		}
-		
 		//참조 테스트
 		List<MemberDto> a = list;
 		MemberDto b = list.get(0);
