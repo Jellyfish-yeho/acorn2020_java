@@ -36,7 +36,7 @@ public class ClientMain extends JFrame
 		try {
 			//접속이 성공되면 Socket 객체의 참조값이 반환된다.
 			//반환되는 객체의 참조값을 필드에 저장해 놓는다. 
-			socket=new Socket("192.168.0.30", 5000);
+			socket=new Socket("14.63.164.99", 5000);
 			//서버에 문자열을 출력할
 			//BufferedWriter 객체의 참조값을 얻어내서 필드에 저장해 놓는다. 
 			OutputStream os=socket.getOutputStream();
@@ -134,7 +134,7 @@ public class ClientMain extends JFrame
 					//JTextArea 에 출력하기
 					area.append(msg);
 					area.append("\r\n");//개행 기호도 출력하기 
-					//최근 추가된 글 내용이 보일수 있도록
+					//최근 추가된 글 내용이 보일수 있도록 자동 스크롤
 					int docLength=area.getDocument().getLength();
 					area.setCaretPosition(docLength);
 					if(msg==null) {

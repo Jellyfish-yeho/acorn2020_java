@@ -16,11 +16,11 @@ public class Quiz01 {
 		System.out.println("저장할 문자열 입력:");
 		String str=scan.nextLine();
 		
-		File file1=new File("c:/acorn2020/myFolder/quiz.txt");
+		File file1=new File("c:/acorn202104/myFolder/quiz.txt");
 		try {
 			boolean isExist=file1.exists();
-			if(!isExist) {
-				file1.createNewFile();
+			if(!isExist) { //만일 존재하지 않는다면
+				file1.createNewFile(); //파일을 새로 만든다
 			}
 			// new FileWriter(File 객체, append 모드 여부)
 			FileWriter fw=new FileWriter(file1, true);

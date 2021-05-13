@@ -61,7 +61,7 @@ public class MyFrame extends JFrame
 		list.setModel(model);
 		
 		JScrollPane sc=new JScrollPane(list,
-				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS;
+				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		
 		add(sc, BorderLayout.CENTER);
