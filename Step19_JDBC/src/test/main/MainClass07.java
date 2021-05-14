@@ -34,18 +34,20 @@ public class MainClass07 {
 			//query 문 수행하고 결과 얻어오기
 			rs=pstmt.executeQuery();
 			//반복문 돌면서 select 된 회원정보  읽어오기
+
 			while(rs.next()) {
-				//회원정보를 list 에 담아 보세요.
+				//회원정보를 list에 담기
 				int num=rs.getInt("num");
 				String name=rs.getString("name");
 				String addr=rs.getString("addr");
 				//MemberDto 객체를 생성해서 회원 한명의 정보를 담는다.
-				MemberDto dto=new MemberDto();
-				dto.setNum(num);
-				dto.setName(name);
-				dto.setAddr(addr);
-				//MemberDto 객체를 List 에 누적 시킨다.
-				list.add(dto);
+				MemberDto memDto=new MemberDto();
+//				MemberDto a=new MemberDto(num,name,addr);
+				memDto.setNum(num);
+				memDto.setName(name);
+				memDto.setAddr(addr);
+				//MemberDto 객체를 List에 누적시킨다.
+				list.add(memDto);
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

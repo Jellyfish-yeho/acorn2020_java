@@ -33,7 +33,7 @@ public class MemberDto {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	
+
 }
 
 

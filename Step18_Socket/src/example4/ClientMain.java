@@ -43,7 +43,7 @@ public class ClientMain extends JFrame
 			OutputStreamWriter osw=new OutputStreamWriter(os);
 			bw=new BufferedWriter(osw);
 			//서버로 부터 메세지를 받을 스레드도 시작을 시킨다.
-			new ClientThread().start();
+			new ClientThread().start();	
 		}catch(Exception e) {//접속이 실패하면 예외가 발생한다.
 			e.printStackTrace();
 		}

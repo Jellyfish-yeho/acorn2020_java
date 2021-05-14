@@ -18,10 +18,10 @@ public class MainClass10 {
 		dao.insert(dto);
 		
 		MemberDao dao2=MemberDao.getInstance();
-		//수정할 회원의 정보라면
-		MemberDto dto2=new MemberDto(1, "김구라", "독산동");
-		dao2.update(dto2);
+		dao2.delete(35);
 		
+		boolean result = dao == dao2;
+		System.out.println(result);
 	}
 }
 

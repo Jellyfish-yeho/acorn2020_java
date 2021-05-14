@@ -24,7 +24,7 @@ public class MainClass06 {
 			e.printStackTrace();
 		}
 		//삭제할 회원의 번호 
-		int num=3;
+		int num=1;
 		
 		PreparedStatement pstmt=null;
 		try {
@@ -35,8 +35,12 @@ public class MainClass06 {
 			//? 에 값 바인딩
 			pstmt.setInt(1, num);
 			//sql 문 실행하기 
-			pstmt.executeUpdate();
-			System.out.println("회원 정보를 삭제 했습니다.");
+			int flag=pstmt.executeUpdate();
+			if(flag>0) {
+				System.out.println("회원 정보를 삭제 했습니다.");
+			}else {
+				System.out.println("삭제할 데이터가 없습니다.");
+			}			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
