@@ -7,7 +7,7 @@ public class ClientMain {
 		Socket socket=null;
 		try {
 			//객체 생성과 동시에 서버의 5000번 port로 접속 요청을 하게 된다. 
-			socket=new Socket("14.63.164.99", 5000);
+			socket=new Socket("127.0.0.1", 5000);
 			System.out.println("Socket 연결 성공!");
 		}catch(Exception e) {
 			e.printStackTrace();
