@@ -74,12 +74,12 @@ public class MemoFrame extends JFrame
 		JScrollPane scroll=new JScrollPane(table);
 		//JScrollPane  을 프레임의 가운데에 배치하기 
 		add(scroll, BorderLayout.CENTER);
-		//테이블에 회원 목록 출력하기
+		//테이블에 메모 목록 출력하기
 		displayMember();
 		//테이블에서 발생하는 이벤트 리스너 등록 하기
 		table.addPropertyChangeListener(this);
 	}
-	//테이블에 회원 목록을 출력하는 메소드 
+	//테이블에 메모 목록을 출력하는 메소드 
 	public void displayMember() {
 		//row  의 갯수를 강제로 0 으로 지정해서 삭제 한다. 
 		model.setRowCount(0);
@@ -146,6 +146,7 @@ public class MemoFrame extends JFrame
 	//현재 테이블 cell을 수정중인지 여부를 저장할 필드 
 	boolean isEditing=false;
 	
+	//PropertyChangeListener 인터페이스를 구현해서 강제 오버라이드한 메소드
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		System.out.println("property change!");
@@ -162,12 +163,12 @@ public class MemoFrame extends JFrame
 				//DB에 저장하기 
 				MemoDao.getInstance().update(dto);
 				isEditing=false;//수정중이 아니라고 표시한다.
+			}else {
+				isEditing=true;//수정중이라 표시한다.
 			}
-			isEditing=true;//수정중이라 표시한다.
 		}
 	}
 }
-
 
 
 
