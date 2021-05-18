@@ -59,7 +59,7 @@ public class ServerMain {
 		public void sendMessage(String msg) throws IOException {
 			//반복문 돌면서 모든 스레드의 BufferedWriter 객체를 이용해서
 			//문자열을 전송한다. 
-			for(ServerThread tmp:threadList) {
+			for(ServerThread tmp:threadList) { //ServerMain.threadList
 				tmp.bw.write(msg); //문자열 출력
 				tmp.bw.newLine(); //개행기호 출력
 				tmp.bw.flush(); //방출
