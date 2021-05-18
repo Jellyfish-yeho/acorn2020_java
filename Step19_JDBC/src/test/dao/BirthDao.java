@@ -72,13 +72,12 @@ public class BirthDao {
 			conn = new DBConnect().getConn();
 			//실행할 sql (Insert, update, delete) 작성
 			String sql = "update birth"
-						+" set name=?, birth=?"
+						+" set name=?"
 						+" where num=?";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩할 내용이 있으면 여기서 한다.
 			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getBirth());
-			pstmt.setInt(3, dto.getNum());
+			pstmt.setInt(2, dto.getNum());
 			//수정된 row의 개수가 리턴된다.
 			flag = pstmt.executeUpdate();
 		} catch (Exception e) {
@@ -141,7 +140,7 @@ public class BirthDao {
 		try {
 			conn = new DBConnect().getConn();
 			//실행할 SELECT 문
-			String sql = "select name, birthday"
+			String sql = "select num,name,to_char(birthday,'yyyy\"년\"mm\"월\"dd\"일\"') as birthday"
 						+" from birth"
 						+" where num=?";
 			pstmt = conn.prepareStatement(sql);

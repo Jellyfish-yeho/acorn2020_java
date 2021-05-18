@@ -53,7 +53,7 @@ public class BirthFrame extends JFrame
 		model=new DefaultTableModel(colNames,0) {
 			@Override
 			public boolean isCellEditable(int row, int column) {
-				if(column==0) {
+				if(column==0||column==2) {
 					return false;
 				}
 				return true;
@@ -127,12 +127,14 @@ public class BirthFrame extends JFrame
 				int selectedIndex=table.getSelectedRow();
 				int num=(int) model.getValueAt(selectedIndex, 0);
 				String name=(String) model.getValueAt(selectedIndex, 1);
-				String birthday=(String) model.getValueAt(selectedIndex, 2);
-				BirthDto dto=new BirthDto(num,name,birthday);
+				BirthDto dto=new BirthDto();
+				dto.setNum(num);
+				dto.setName(name);
+				//db에 저장하기
 				BirthDao.getInstance().update(dto);			
-				isEditing=false;
+				isEditing=false; //수정중이 아니라고 표시한다
 			}else {
-				isEditing=true;
+				isEditing=true; //수정중이라고 표시한다
 			}
 		}
 	}

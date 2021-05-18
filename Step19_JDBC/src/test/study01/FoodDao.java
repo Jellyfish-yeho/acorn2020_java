@@ -31,7 +31,6 @@ public class FoodDao {
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩할 내용이 있으면 여기서 한다.
 			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getRegdate());
 			flag = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,13 +59,12 @@ public class FoodDao {
 			conn = new DBConnect().getConn();
 			//실행할 sql (Insert, update, delete) 작성
 			String sql = "update foodie"
-						+" set name=?, regdate=?"
+						+" set name=?"
 						+" where num=?";
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 바인딩할 내용이 있으면 여기서 한다.
 			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getRegdate());
-			pstmt.setInt(3, dto.getNum());
+			pstmt.setInt(2, dto.getNum());
 			flag = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
